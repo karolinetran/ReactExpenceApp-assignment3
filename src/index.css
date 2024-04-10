@@ -18,16 +18,104 @@ code {
   background:green;
   padding:2em;
 }
+/*Input*/
 
 .input-form-container{
   background:lightgrey;
   padding:1em;
   border-radius:1em;
-  width:50%;
+  width:30%;
   margin:2em;
 }
 
 .input-form{
   display: flex;
   flex-direction: column;
+}
+
+.input-form-element{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding:0.2em;
+}
+
+.input-form-element label {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:100%;
+}
+
+.input-form-element input {
+  width:65%;
+}
+
+.input-form-element select{
+  width:65%;
+}
+
+.input-btn{
+  border:1px solid white;
+  padding:0.3em;
+  border-radius: 0.4em;
+  background:green;
+  color: white;
+  margin:1em;
+  font-weight: 700;
+}
+
+.input-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/*Display*/
+
+.display-container{
+  background:rgba(0, 128, 0, 0.222);
+  padding:1em;
+  border-radius:1em;
+  margin:1em;
+  margin-top:2em;
+  width:50%;
+}
+
+.display-item{
+  background:green;
+  margin:0.2em;
+  border-radius:1em;
+}
+
+.display-item-header{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left:0.5em;
+  padding-right:0.5em;
+}
+
+.display-item-header button{
+  height:30px;
+  margin-top:0.5em;
+  border:none;
+  border-radius:1em;
+  background:rgb(156, 30, 30);
+  color:white;
+}
+
+.display-item-header button:hover{
+  cursor: pointer;
+  opacity: 0.85;
+}
+
+.display-item-details{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left:0.5em;
+  padding-right:0.5em;
+  background: rgb(104, 183, 104);
+  border-bottom-right-radius:1em;
+  border-bottom-left-radius: 1em;
 }
