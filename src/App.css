@@ -29,9 +29,17 @@
 }
 
 .input-display-container{
-  display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
+
+@media (min-width: 650px) {
+  .input-display-container{
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
 
 @keyframes App-logo-spin {
   from {

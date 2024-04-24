@@ -125,3 +125,12 @@ code {
   border-bottom-right-radius:1em;
   border-bottom-left-radius: 1em;
 }
+
+@media (max-width: 650px) {
+  .input-form-container{
+    width:80%;
+  }
+  .display-container{
+    width:90%;
+  }
+}
