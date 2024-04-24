@@ -7,12 +7,13 @@ class ExpenseItem extends React.Component {
 		const category = this.props.category;
 		const amount = this.props.amount;
 		const date = this.props.date;
+		const onRemove = this.props.onRemove;
 
       return (
 	  		<div className="display-item">
 				<div className="display-item-header">
 					<h4>{title}</h4>
-					<button>
+					<button onClick={onRemove}>
 						Remove
 					</button>
 				</div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import {useEffect} from 'react';
 import InputElement from "./InputElement.js";
 import InputDropdown from './InputDropdown.js';
 
@@ -12,11 +11,9 @@ class InputForm extends React.Component {
           amount:"",
           date:"",
           category:"-",
-          counter:0,
           error:false
         };
     }
-    
 
     handleInputChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
@@ -36,33 +33,50 @@ class InputForm extends React.Component {
                 date: date,
                 category: category
             };
-            localStorage.setItem(`expense_${this.state.counter}`, JSON.stringify(expense));
-            this.state.counter = this.state.counter + 1;
+            localStorage.setItem(`expense_${this.props.expenses.length}`, JSON.stringify(expense));
+            this.props.onExpenseUpdate();
+
+            this.setState({
+                title: "",
+                amount: "",
+                date: "",
+                category: "-",
+                error: false
+            });
+
         }
     }
     
 
     render() {
+
+      const { error } = this.state;
+      const {title, amount, date,category} = this.state;
+
       return <div className="input-form-container">
                 <h1>Input Expence</h1>
                 <form className="input-form">
                     <InputElement
                         type='text' 
                         name='title' 
+                        value={title}
                         handleInputChange={this.handleInputChange}
                     />
                     <InputElement
                         type='number' 
                         name='amount' 
+                        value={amount}
                         handleInputChange={this.handleInputChange}
                     />
                     <InputElement
                         type='date' 
                         name='date' 
+                        value={date} 
                         handleInputChange={this.handleInputChange}
                     />
                     <InputDropdown
                         name="category"
+                        value={category}
                         handleInputChange={this.handleInputChange}
                     />
                     <button 
@@ -71,7 +85,12 @@ class InputForm extends React.Component {
                     >
                         Submit Expence
                     </button>
-                </form>
+                </form>            
+                {error && 
+                    <p>
+                        Please fill in all fields
+                    </p>
+                }
 
             </div>;
     }

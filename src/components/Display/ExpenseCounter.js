@@ -3,9 +3,11 @@ import React from 'react';
 class ExpenseCounter extends React.Component {
     render() {
 
+	  const count = this.props.count;
+
       return (
 	  		<div className="">
-				<p>Listed expenses: 2</p>
+				<p>Listed expenses: {count}</p>
             </div>
 			);
     }

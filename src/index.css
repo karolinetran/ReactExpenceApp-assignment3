@@ -26,6 +26,7 @@ code {
   border-radius:1em;
   width:30%;
   margin:2em;
+  height:30vh;
 }
 
 .input-form{
@@ -79,6 +80,11 @@ code {
   margin:1em;
   margin-top:2em;
   width:50%;
+}
+
+.display-container-items{
+  max-height:55vh;
+  overflow-y: auto;
 }
 
 .display-item{

@@ -6,6 +6,7 @@ class InputElement extends React.Component {
 		const type = this.props.type;
 		const name = this.props.name;
 		const handleInputChange = this.props.handleInputChange;
+		const value = this.props.value;
 
 		return (
 			<div className="input-form-element">
@@ -14,6 +15,7 @@ class InputElement extends React.Component {
 					<input 
 						type={type} 
 						name={name}
+						value={value} 
 						onChange={handleInputChange}
 						required
 					/>
