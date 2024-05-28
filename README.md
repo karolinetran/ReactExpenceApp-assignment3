@@ -1,4 +1,18 @@
+## React Expense app
+
+Denne applikasjonen er laget med React og lar brukeren legge til utgifter og lagrer disse i localStorage. 
+
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/fbe19f16-1594-4a37-9da2-e7ceb2d95cb7/deploy-status)](https://app.netlify.com/sites/reactexpenceapp/deploys)
+
+https://github.com/karolinetran/ReactExpenceApp-assignment3
+
+deployed on: https://reactexpenceapp.netlify.app
+
+
+
+
+
 
 # Getting Started with Create React App
 
