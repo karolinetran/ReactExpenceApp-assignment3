@@ -3,6 +3,7 @@ import React from 'react';
 class InputDropdown extends React.Component {
     render() {
 
+		// Destructure props for easy access
 		const name = this.props.name;
 		const handleInputChange = this.props.handleInputChange;
 

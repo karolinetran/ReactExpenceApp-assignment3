@@ -11,10 +11,13 @@ class DisplayContainer extends React.Component {
       return (
 	  		<div className="display-container">
                 <h1>Expenses List</h1>
+
+				{/* Component to display the count of expenses */}
 				<ExpenseCounter
 					count= {expenses.length}
 				/>
 				<div className="display-container-items">
+					{/* Map through the expenses and render an ExpenseItem for each */}
 					{expenses.map((expence, index) => (
 						<ExpenseItem
 							title = {expence.title}

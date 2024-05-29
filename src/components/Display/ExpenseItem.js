@@ -3,6 +3,7 @@ import React from 'react';
 class ExpenseItem extends React.Component {
     render() {
 
+		// Destructure props for easy access
 		const title = this.props.title;
 		const category = this.props.category;
 		const amount = this.props.amount;

@@ -6,6 +6,7 @@ import InputDropdown from './InputDropdown.js';
 class InputForm extends React.Component {
     constructor(props) {
         super(props);
+        // Initialize state
         this.state = {
           title: "",
           amount:"",
@@ -15,27 +16,34 @@ class InputForm extends React.Component {
         };
     }
 
+    // Handle input changes and update state
     handleInputChange = (event) => {
         this.setState({ [event.target.name]: event.target.value });
     }
 
+    // Handle form submission
     handleSubmit = (event) => {
         event.preventDefault();
         const { title, amount, date, category } = this.state;
     
-        if (title === "" || amount === "" || date === "") {
+        // checks if any of the inputs fields are empty, if so sets error state to true
+        if (title === "" || amount === "" || date === "") { 
             console.log("Error");
             this.setState({error : true});    
         } else {
+            // If all fields are filled, create an expense object
             const expense = {
                 title: title,
                 amount: amount,
                 date: date,
                 category: category
             };
+
+            // Save the expense object to local storage
             localStorage.setItem(`expense_${this.props.expenses.length}`, JSON.stringify(expense));
             this.props.onExpenseUpdate();
 
+            // Reset the form fields and error state
             this.setState({
                 title: "",
                 amount: "",

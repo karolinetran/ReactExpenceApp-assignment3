@@ -3,6 +3,7 @@ import React from 'react';
 class InputElement extends React.Component {
     render() {
 		
+		// Destructure props for easy access
 		const type = this.props.type;
 		const name = this.props.name;
 		const handleInputChange = this.props.handleInputChange;
@@ -21,7 +22,7 @@ class InputElement extends React.Component {
 					/>
 				</label>
 			</div>
-				);
+		);
     }
   }
 
